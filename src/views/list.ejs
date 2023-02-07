@@ -1,0 +1,43 @@
+<%- include ('./partials/head.ejs') %>
+<body>
+    <%- include ('./partials/header.ejs') %>
+    <main>
+        <h3>*Las reservas son en el día entre las 10:00 am hasta las 23:30pm.<br>
+        *Tolerancia máxima: 10 min.</h3>
+        <section class="container">
+            <div class="first-column">
+                <% for( i = 1 ; i <= 8;i++ ) { %>
+                <p>Mesa <%=i%></p>
+                <% } %>
+            </div>
+            <div class="second-column">
+                <input type="button" readonly value="Caja">
+                <% for( i = 9; i <= 12; i++ ) { %>
+                    <p>Mesa <%=i%></p>
+                <% } %>
+            </div>
+            <div class="third-column">
+                <% for( i = 13 ; i <= 20;i++ ) { %>
+                    <p>Mesa <%=i%></p>
+                    <% } %>
+            </div>
+        </section>
+        <section class="form-container"> 
+        <form action="/reserve" method="post">
+            <fieldset>
+            <label for="table">Seleccionar mesa: </label>
+            <input type="number" name="table" min="1" max="20" required>
+        </fieldset>
+        <fieldset>
+            <label for="date">Hora de la reserva:</label>
+            <input type="time" name="time" min="10:00" max="23:30" required>
+        </fieldset>
+        <fieldset>
+            <label for="dni">DNI:</label>
+            <input type="text" name="dni" required>
+        </fieldset>
+        <button type="submit">Reservar</button>
+        </form>
+    </section>
+    </main> 
+</body> 

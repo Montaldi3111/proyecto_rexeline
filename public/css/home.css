@@ -1,0 +1,46 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    font-family: 'Philosopher', sans-serif;
+}
+
+main{
+    width: 100%;
+}
+
+main img {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+}
+
+main .text{
+    padding-top: 15em;
+    letter-spacing: .5px;
+    color: white;
+    text-align: center;
+    align-items: center;
+}
+
+main div .reserve-now {
+    margin: 3em auto auto auto;
+    width: 200px;
+    padding: 10px;
+    align-items: center;
+    border-radius: 50px;
+    background-color: #593723;
+}
+
+main div .reserve-now a{
+    color:white;
+    font-size: 22px;
+}
+
+main div.reserve-now:hover{
+    background-color: #8C5230;
+}

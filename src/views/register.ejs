@@ -1,0 +1,32 @@
+<%-include('./partials/head.ejs')%>
+<body>
+    <%-include('./partials/header.ejs')%>
+    <main>
+    <div class="form-container">
+        <h1>Registro</h1>
+        <form action="/create" method="post">
+            <fieldset>
+                <input type="text" name="name" placeholder="Nombre">
+            </fieldset>
+            <fieldset>
+                <input type="text" name="surname" placeholder="Apellido">
+            </fieldset>
+            <fieldset>
+                <input type="email" name="email" placeholder="Email">
+            </fieldset>
+            <fieldset>
+                <input type="password" name="password" placeholder="Contraseña">
+            </fieldset>
+            <fieldset>
+                <input type="password" name="repeat-password" placeholder="Repetir Contraseña">
+            </fieldset>
+            <fieldset>
+                <label for="birthday" class="">Fecha de nacimiento:</label>
+                <input type="date" name="birthday" placeholder="Fecha de nacimiento">
+            </fieldset>
+            <button type="submit">Registrarse</button>
+        </form>
+    </div>
+</main>
+</body> 
+</html>

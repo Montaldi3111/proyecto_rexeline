@@ -1,0 +1,129 @@
+*{
+    margin:0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+main{
+    font-family: 'Philosopher',sans-serif;
+    background-color: #D9B29C;
+    text-align: center;
+}
+
+main .container .free{
+    background-color: greenyellow;
+}
+
+main .container .reserved{
+    background-color: red;
+}
+
+main h3 {
+    padding: 30px 0;
+}
+
+main .container{
+    display: flex;
+    justify-content: space-between;
+    margin: auto;
+    width: 600px;
+    height: 300px;
+    border: 1px solid black;
+    padding: 5px;
+    background-color: #F2F2F2;
+}
+
+main .first-column{
+    width: 200px;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+main .first-column p {
+    height: max-content;
+    font-size: 18px;
+    margin: 5px;
+    padding: 5px 9px;
+    border: 1px solid black
+}
+
+main .second-column{
+    width: 180px;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+main .second-column input{
+    font-size: 18px;
+    border: none;
+    background-color: grey;
+    width: 100px;
+    padding: 10px;
+}
+
+main .second-column p {
+    height: max-content;
+    font-size: 18px;
+    margin: 5px;
+    padding: 5px 9px;
+    border: 1px solid black
+}
+
+main .third-column{
+    width: 200px;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+main .third-column p {
+    height: max-content;
+    font-size: 18px;
+    margin: 5px;
+    padding: 5px 9px;
+    border: 1px solid black
+}
+
+main .form-container {
+    width: 300px;
+    margin: auto;
+}
+
+main form {
+    margin: 3em 0 0 0;
+}
+
+main form fieldset{
+    font-size: 20px;
+    border: none;
+    margin-bottom: 30px;
+    text-align: center;
+}
+
+main form input[type="text"]{
+    padding: 5px;
+    border: 1px solid #593723;
+    border-radius: 30px;
+}
+
+main form button {
+    padding: 10px;
+    margin-bottom: 8px;
+    color:white;
+    border: none;
+    background-color: #593723;
+    border-radius: 30px;
+    width: 150px;
+    letter-spacing: .5px;
+    font-size: 22px;
+}
+
+main form button:hover {
+    background-color: #D98D62;
+}

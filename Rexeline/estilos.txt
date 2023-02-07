@@ -1,0 +1,4 @@
+Colores: #8C5230, #D98D62, #F2F2F2
+Fondo: #D9B29C
+Botones: #593723
+Fuente: Philosopher, sans-serif

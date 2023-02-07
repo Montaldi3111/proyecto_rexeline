@@ -1,0 +1,38 @@
+header{
+    font-family: 'Philosopher', sans-serif;
+    width: 100%;
+    z-index: 1;
+    background-color: #D98D62;
+}
+
+header nav{
+    list-style: none;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 5px;
+}
+
+header nav div .login{
+    margin-right: 2em;
+    color: white;
+}
+header nav div .register{
+    color: white;;
+}
+
+header nav .logo {
+    color: white;
+    text-align: center;
+    font-size: 22px;
+    flex-grow: 8;
+}
+
+header nav .reserve {
+    color: white;
+    margin-right: 5em;
+}
+
+header nav a:hover{
+    color: #8C5230;
+}
