@@ -4,23 +4,78 @@
     <main>
         <h3>*Las reservas son en el día entre las 10:00 am hasta las 23:30pm.<br>
         *Tolerancia máxima: 10 min.</h3>
+        <% if(locals.error) {%>
+            <p><%=locals.error%></p>
+        <% } else if(locals.success) {%>
+            <p><%=locals.success%></p>
+            <% } %>
         <section class="container">
-            <div class="first-column">
-                <% for( i = 1 ; i <= 8;i++ ) { %>
-                <p>Mesa <%=i%></p>
-                <% } %>
+                <div class="first-column">
+                   <% if(reservations.length > 0){ %>
+                            <% for( i = 0; i < 8; i++ ) { %>
+                                <% var b = 0 %>
+                                <% for( j = 0; j < reservations.length; j++ ) { %>
+                                    <% if(tables[i].id == reservations[j].table_id) {%>
+                                        <% b=1 %>
+                                        <% } %>
+                                <% } %>
+                                <% if (b==1) { %>
+                                    <p class="reserved"><%=tables[i].name %></p>
+                                <% } else {%>
+                                    <p class="free"><%=tables[i].name %></p>
+                                <% } %>
+                            <% } %>
+                    <% } else {%>
+                        <% for( i = 0; i < 8; i++ ) { %>
+                                <p class="free"><%=tables[i].name %></p>
+                        <% } %>
+                        <% } %>
             </div>
             <div class="second-column">
                 <input type="button" readonly value="Caja">
-                <% for( i = 9; i <= 12; i++ ) { %>
-                    <p>Mesa <%=i%></p>
+                <% if(reservations.length > 0){ %>
+                    <% for( i = 8; i < 12; i++ ) { %>
+                        <% var b = 0 %>
+                        <% for( j = 0; j < reservations.length; j++ ) { %>
+                            <% if(tables[i].id == reservations[j].table_id) {%>
+                                <% b=1 %>
+                                <% } %>
+                        <% } %>
+                        <% if (b==1) { %>
+                            <p class="reserved"><%=tables[i].name %></p>
+                        <% } else {%>
+                            <p class="free"><%=tables[i].name %></p>
+                        <% } %>
+                    <% } %>
+            <% } else {%>
+                <% for( i = 8; i < 12; i++ ) { %>
+                        <p class="free"><%=tables[i].name %></p>
+                <% } %>
                 <% } %>
             </div>
             <div class="third-column">
-                <% for( i = 13 ; i <= 20;i++ ) { %>
-                    <p>Mesa <%=i%></p>
+                <% if(reservations.length > 0){ %>
+                    <% for( i = 12; i < 20; i++ ) { %>
+                        <% var b = 0 %>
+                        <% for( j = 0; j < reservations.length; j++ ) { %>
+                            <% if(tables[i].id == reservations[j].table_id) {%>
+                                <% b=1 %>
+                                <% } %>
+                        <% } %>
+                        <% if (b==1) { %>
+                            <p class="reserved"><%=tables[i].name %></p>
+                        <% } else {%>
+                            <p class="free"><%=tables[i].name %></p>
+                        <% } %>
                     <% } %>
+            <% } else {%>
+                <% for( i = 12; i < 20; i++ ) { %>
+                        <p class="free"><%=tables[i].name %></p>
+                <% } %>
+                <% } %>
             </div>
+
+            
         </section>
         <section class="form-container"> 
         <form action="/reserve" method="post">

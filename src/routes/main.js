@@ -7,6 +7,8 @@ router.get('/login', mainController.login);
 router.get('/register', mainController.register);
 router.get('/tableList', mainController.list);
 
+router.post('/create', mainController.create);
+router.post('/access', mainController.access);
 router.post('/reserve', mainController.reserve)
 
 module.exports = router;
