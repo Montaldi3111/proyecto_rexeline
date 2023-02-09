@@ -78,21 +78,25 @@
             
         </section>
         <section class="form-container"> 
-        <form action="/reserve" method="post">
+        <form action="/reserve" method="post" class="reserveForm">
             <fieldset>
             <label for="table">Seleccionar mesa: </label>
-            <input type="number" name="table" min="1" max="20" required>
+            <input type="number" name="table" min="1" max="20" class="table" required>
+            <p class="error-msg"></p>
         </fieldset>
         <fieldset>
             <label for="date">Hora de la reserva:</label>
-            <input type="time" name="time" min="10:00" max="23:30" required>
+            <input type="time" name="time" min="10:00" max="23:30" class="time" required>
+            <p class="error-msg"></p>
         </fieldset>
         <fieldset>
             <label for="dni">DNI:</label>
-            <input type="text" name="dni" required>
+            <input type="text" name="dni" required class="dni">
+            <p class="error-msg"></p>
         </fieldset>
         <button type="submit">Reservar</button>
         </form>
     </section>
     </main> 
+    <script src='/scripts/reserve.js'> </script>
 </body> 
