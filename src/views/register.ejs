@@ -4,29 +4,36 @@
     <main>
     <div class="form-container">
         <h1>Registro</h1>
-        <form action="/create" method="post" autocomplete="off">
+        <form action="/create" method="post" class="registerForm">
             <fieldset>
-                <input type="text" name="name" placeholder="Nombre">
+                <input type="text" name="name" placeholder="Nombre" class="name">
+                <p class="error-msg"></p>
             </fieldset>
             <fieldset>
-                <input type="text" name="surname" placeholder="Apellido">
+                <input type="text" name="surname" placeholder="Apellido" class="surname">
+                <p class="error-msg"></p>
             </fieldset>
             <fieldset>
-                <input type="email" name="email" placeholder="Email">
+                <input type="email" name="email" placeholder="Email" class="email">
+                <p class="error-msg"></p>
             </fieldset>
             <fieldset>
-                <input type="password" name="password" placeholder="Contraseña">
+                <input type="password" name="password" placeholder="Contraseña" class="password">
+                <p class="error-msg"></p>
             </fieldset>
             <fieldset>
-                <input type="password" name="repeat-password" placeholder="Repetir Contraseña">
+                <input type="password" name="repeat-password" placeholder="Repetir Contraseña" class="repeat-password">
+                <p class="error-msg"></p>
             </fieldset>
             <fieldset>
                 <label for="birthday" class="">Fecha de nacimiento:</label>
-                <input type="date" name="birthday" placeholder="Fecha de nacimiento">
+                <input type="date" name="birthday" placeholder="Fecha de nacimiento" class="birthday">
+                <p class="error-msg"></p>
             </fieldset>
             <button type="submit">Registrarse</button>
         </form>
     </div>
 </main>
+<script src="/scripts/register.js"></script>
 </body> 
 </html>
