@@ -36,7 +36,7 @@ module.exports = (Sequelize, DataTypes) => {
     const User = Sequelize.define(alias,cols,config);
     User.associate = (models) => {
         User.hasMany(models.Reservation, {
-            as: 'reservation',
+            as: 'users',
             foreignKey: 'user_id'
         })
     }
